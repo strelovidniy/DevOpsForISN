@@ -1,0 +1,5 @@
+subscription_id         = "*"
+serviceprinciple_id     = "*"
+serviceprinciple_key    = "*"
+tenant_id               = "*"
+ssh_key                 = "*"

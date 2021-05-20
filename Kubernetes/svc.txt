@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2021-05-19T21:46:00Z"
+  finalizers:
+  - service.kubernetes.io/load-balancer-cleanup
+  name: nginx
+  namespace: default
+  resourceVersion: "713"
+  selfLink: /api/v1/namespaces/default/services/nginx
+  uid: c73ed51c-feff-40a5-a248-9b5b4e63f4b4
+spec:
+  clusterIP: 10.0.162.103
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 31158
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    test: Nginx
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 20.61.161.181
